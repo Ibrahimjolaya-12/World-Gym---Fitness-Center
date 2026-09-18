@@ -55,6 +55,7 @@ sweep(document)})();</script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <meta name="theme-color" content="#09090b" />
+<link rel="website icon" type="image/png" href="/logo.png">
 <title>World Gym & Fitness Center</title>
 <meta name="description" content="World Gym & Fitness Center ladies and gents, Faisalabad. Heavy strength equipment, cardio deck, certified personal trainers. 4.4★ from 95+ Google reviews. Claim your free 1-day trial today." />
 <meta property="og:title" content="World Gym & Fitness Center — Faisalabad's Home of Strength" />
@@ -63,7 +64,6 @@ sweep(document)})();</script>
 <link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="website icon" type="image/png" href="/logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
 <script src="https://cdn.tailwindcss.com/3.4.16"></script>
@@ -179,7 +179,7 @@ const GYM = {
 };
 
 const wa = (msg) => `https://wa.me/${GYM.whatsapp}?text=${encodeURIComponent(msg)}`;
-const "tel:+923417100445" = wa("Hi World Gym & Fitness Center ladies and gents! I'd like to claim my 1-Day Free Trial. Please share the details.");
+const WA_FREE_TRIAL = wa("Hi World Gym & Fitness Center ladies and gents! I'd like to claim my 1-Day Free Trial. Please share the details.");
 const WA_SIGNUP = (plan) =>
   wa(`Hi World Gym & Fitness Center ladies and gents! I want to join on the *${plan}* membership plan. Please guide me through signup.`);
 const WA_TRAINER = wa("Hi World Gym & Fitness Center ladies and gents! I just checked my BMI on your website and would like to discuss my fitness goals with a trainer.");
@@ -340,7 +340,7 @@ function Header() {
             <Icon name="Phone" className="h-4 w-4" />
             {GYM.phoneDisplay}
           </a>
-          <Btn href={"tel:+923417100445"} target="_blank" rel="noopener noreferrer" size="sm" className="hidden sm:inline-flex">
+          <Btn href={WA_FREE_TRIAL} target="_blank" rel="noopener noreferrer" size="sm" className="hidden sm:inline-flex">
             Join Now
             <Icon name="ArrowRight" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Btn>
@@ -377,7 +377,7 @@ function Header() {
             </li>
           ))}
           <li className="pt-3">
-            <Btn href={"tel:+923417100445"} target="_blank" rel="noopener noreferrer" className="w-full">
+            <Btn href={WA_FREE_TRIAL} target="_blank" rel="noopener noreferrer" className="w-full">
               Claim 1-Day Free Trial
               <Icon name="MessageCircle" className="h-4 w-4" />
             </Btn>
@@ -447,7 +447,7 @@ function Hero() {
             </p>
 
             <div className="mt-9 flex flex-col gap-3.5 sm:flex-row sm:items-center">
-              <Btn href={"tel:+923417100445"} target="_blank" rel="noopener noreferrer" size="lg" variant="whatsapp" className="w-full sm:w-auto">
+              <Btn href={WA_FREE_TRIAL} target="_blank" rel="noopener noreferrer" size="lg" variant="whatsapp" className="w-full sm:w-auto">
                 <Icon name="MessageCircle" className="h-5 w-5" />
                 Claim 1-Day Free Trial
               </Btn>
@@ -810,7 +810,7 @@ function Pricing() {
                 <p className="mt-1 text-sm text-zinc-400">Try the gym free for a day — then decide with zero pressure.</p>
               </div>
             </div>
-            <Btn href={"tel:+923417100445"} target="_blank" rel="noopener noreferrer" variant="whatsapp" className="w-full shrink-0 sm:w-auto">
+            <Btn href={WA_FREE_TRIAL} target="_blank" rel="noopener noreferrer" variant="whatsapp" className="w-full shrink-0 sm:w-auto">
               <Icon name="MessageCircle" className="h-5 w-5" />
               Claim 1-Day Free Trial
             </Btn>
@@ -1027,7 +1027,7 @@ function Timing() {
                   Your free trial day works on either shift. Message us and we will keep a trainer free to walk you through the floor.
                 </p>
                 <div className="mt-4">
-                  <Btn href={"tel:+923417100445"} target="_blank" rel="noopener noreferrer" variant="whatsapp" className="w-full text-xs sm:text-sm py-3">
+                  <Btn href={WA_FREE_TRIAL} target="_blank" rel="noopener noreferrer" variant="whatsapp" className="w-full text-xs sm:text-sm py-3">
                     <Icon name="MessageCircle" className="h-4 w-4" />
                     Book My Free Trial Day
                   </Btn>
@@ -1048,7 +1048,7 @@ function LocationFooter() {
   const socials = [
     { name: 'Facebook', icon: 'Facebook', href: 'https://www.facebook.com/worldgympk/' },
     { name: 'Instagram', icon: 'Instagram', href: 'https://www.instagram.com/world_gym_faisalabad/' },
-    { name: 'WhatsApp', icon: 'MessageCircle', href: "tel:+923417100445" }
+    { name: 'WhatsApp', icon: 'MessageCircle', href: WA_FREE_TRIAL }
   ];
   const details = [
     { icon: 'MapPin', label: 'Address', value: GYM.address, sub: GYM.landmark, href: GYM.mapLink },
@@ -1165,7 +1165,7 @@ function LocationFooter() {
                 Walk in, train a full day free, meet the trainers and feel the floor. Then decide.
               </p>
               <div className="mt-8 flex flex-col justify-center gap-3.5 sm:flex-row">
-                <Btn href={"tel:+923417100445"} target="_blank" rel="noopener noreferrer" size="lg" variant="whatsapp" className="w-full sm:w-auto">
+                <Btn href={WA_FREE_TRIAL} target="_blank" rel="noopener noreferrer" size="lg" variant="whatsapp" className="w-full sm:w-auto">
                   <Icon name="MessageCircle" className="h-5 w-5" />
                   Claim 1-Day Free Trial
                 </Btn>
@@ -1209,7 +1209,7 @@ function FloatingWhatsApp() {
 
   return (
     <a
-      href={"tel:+923417100445"}
+      href={WA_FREE_TRIAL}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with World Gym & Fitness Center on WhatsApp"
